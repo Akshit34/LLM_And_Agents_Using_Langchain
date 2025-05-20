@@ -1,7 +1,8 @@
 import google.generativeai as genai
+import os
 
 # Configure with your API key
-genai.configure(api_key="AIzaSyC8iJa2X8-2cDVhK1J6R6l7V1I6dmVe_0I") # For Google AI Studio APIs
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY")) # For Google AI Studio APIs
 
 # Or if using Vertex AI, the initialization would be different
 # from google.cloud import aiplatform
